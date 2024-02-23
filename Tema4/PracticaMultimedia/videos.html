@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Estilos/CSS/main.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom navbar-gradient">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html#info-section">Tecnología Sostenible</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Vídeos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="videos.html#footer">Contacto</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+  
+<main class="flex-grow-1">
+  <section class="container mt-4">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <video controls class="w-100">
+          <source src="./Assets/video1.mp4" type="video/mp4">
+          <track src="./Assets/subtitulos1.vtt" kind="subtitles" srclang="es" label="Español">
+          <img src="./Assets/errorVideo.webp" alt="Video no soportado"/>
+          Tu navegador no soporta vídeos HTML5.
+        </video>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <video controls class="w-100">
+          <source src="./Assets/video2.mp4" type="video/mp4">
+          <track src="./Assets/subtitulos2.vtt" kind="subtitles" srclang="es" label="Español">
+          <img src="./Assets/errorVideo.webp" alt="Video no soportado"/>
+          Tu navegador no soporta vídeos HTML5.
+        </video>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+      <footer class="site-footer" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>Acerca de</h6>
+              <p class="text-justify">Tecnología Sostenible es una iniciativa para promover el uso consciente de la tecnología que apoya la sostenibilidad ambiental. Nuestro objetivo es informar y educar sobre prácticas tecnológicas que favorezcan la protección del medio ambiente.</p>
+            </div>
+      
+            <div class="col-xs-6 col-md-3">
+              <h6>Enlaces Rápidos</h6>
+              <ul class="footer-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="mailto:mickey1198@hotmail.com">Contáctanos</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p>© 2024 Tecnología Sostenible. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

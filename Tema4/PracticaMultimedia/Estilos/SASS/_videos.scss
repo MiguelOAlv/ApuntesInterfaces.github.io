@@ -1,0 +1,37 @@
+.split-screen-videos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.split-screen-videos .col-md-6 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.split-screen-videos video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .split-screen-videos .col-lg-12 {
+    margin-top: 5rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 50vh;
+  }
+
+  .split-screen-videos .col-md-6 {
+    width: 70%;
+    margin-bottom: 0;
+  }
+
+  .split-screen-videos video {
+    height: 100%;
+    object-fit: contain;
+  }
+}
