@@ -1,0 +1,28 @@
+@use 'variables';
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: variables.$primary-color;
+    color: #fff;
+  
+    .heart::before {
+      content: '\2665';
+      color: variables.$hover-link-color;
+      font-size: 1.6rem;
+    }
+  
+    .code {
+      color: variables.$hover-link-color;
+    }
+  }
+  
+  // Text Selection Color
+  ::selection {
+    color: #fff;
+    background: #02A1A3;
+  }
+  
+  ::-moz-selection {
+    @extend ::selection;
+  }

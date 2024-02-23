@@ -1,0 +1,43 @@
+@use 'variables';
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 75px;
+    background: linear-gradient(to right, variables.$background-color-gradient-start, variables.$background-color-gradient-middle, variables.$background-color-gradient-end);
+    box-shadow: 0 1rem 1rem -1rem rgba(55, 56, 58, 0.2);
+    z-index: 10;
+  
+    > ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    li {
+      padding: 0px 0.8rem;
+    }
+  
+    a {
+      color: #FFFFFF;
+      &:hover {
+        span.code {
+          visibility: visible;
+          opacity: 1;
+          color: variables.$hover-link-color;
+        }
+      }
+    }
+  
+    .code {
+      color: white;
+      transition: color 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s ease-in-out;
+    }
+  }
