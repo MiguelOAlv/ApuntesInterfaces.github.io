@@ -83,14 +83,17 @@ footer .code {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 .nav li {
   padding: 0px 0.8rem;
 }
 .nav a {
   color: #FFFFFF;
+  display: block;
 }
-.nav a:hover span.code {
+.nav a:hover .code {
   visibility: visible;
   opacity: 1;
   color: #9D8ABF;
@@ -101,6 +104,64 @@ footer .code {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+.nav .toggle-menu-checkbox {
+  display: none;
+}
+.nav .toggle-button {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 25px;
+  width: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 11;
+}
+.nav .toggle-button .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav .toggle-button {
+    display: flex;
+  }
+  .nav .toggle-menu-checkbox:checked + label + ul, .nav .toggle-menu-checkbox:not(:checked) + label + ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .nav .toggle-menu-checkbox:checked + label + ul {
+    display: flex;
+  }
+  .nav > ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .nav > ul li {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 769px) {
+  .nav .toggle-menu-checkbox:checked + label + ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 #welcome-section {
@@ -403,7 +464,6 @@ h1 {
   text-align: center;
 }
 
-/* Estilo básico para la barra de navegación */
 .nav ul {
   list-style-type: none;
   margin: 0;
@@ -423,7 +483,6 @@ h1 {
   text-decoration: none;
 }
 
-/* Estilo para el dropdown */
 .dropdown {
   display: inline-block;
 }

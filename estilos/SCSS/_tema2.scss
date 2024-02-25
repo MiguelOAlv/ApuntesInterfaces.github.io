@@ -1,6 +1,5 @@
 @use 'variables';
 
-/* Estilo básico para la barra de navegación */
 .nav ul {
     list-style-type: none;
     margin: 0;
@@ -20,7 +19,6 @@
     text-decoration: none;
 }
 
-/* Estilo para el dropdown */
 .dropdown {
     display: inline-block;
 }
